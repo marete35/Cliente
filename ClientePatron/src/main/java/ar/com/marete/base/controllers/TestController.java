@@ -1,0 +1,19 @@
+package ar.com.marete.base.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class TestController extends BaseController {
+	
+	@RequestMapping("/test")
+	public ModelAndView mensaje() {
+		//esta es la vista de retorno que necesitamos.
+		super.agregarCSSExtra("test.css");
+		super.agregarJsExtra("componentTest.js");
+		super.modelo.put("nombre","mario");
+		return new ModelAndView("pages/test", modelo);
+	}
+
+}
