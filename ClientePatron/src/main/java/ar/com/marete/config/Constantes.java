@@ -1,5 +1,10 @@
 package ar.com.marete.config;
 
+/**
+ * 
+ * @author Marete Ramones
+ *
+ */
 public class Constantes {
 
 	public static String VERSION;
