@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ar.com.marete.config.Constantes;
 
 public class BaseController {
 
-	private static final Logger logger = Logger.getLogger("ClientePatron");
+	private static Logger LOGGER = LoggerFactory.getLogger(BaseController.class);
 	private ArrayList<String> archivosJs = new ArrayList<String>();
 	private ArrayList<String> archivosCss = new ArrayList<String>();
 	protected Map<String, Object> modelo = new HashMap<String, Object>();
@@ -54,7 +55,9 @@ public class BaseController {
 		this.modelo.put("adicionlaCSS", linkCSS);
 		this.modelo.put("adicionalJs", linkJs);
 	}
-
-
+	
+	protected void isUserLogueado() {
+		LOGGER.debug("Es Base Controller");
+	}
 
 }
