@@ -7,14 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class TestController extends BaseController {
-	
-	private final Logger LOGGER = LoggerFactory.getLogger(TestController.class);
+@RequestMapping("/test")
+public class TestDosController extends BaseController{
 
-	
-	@RequestMapping("/test")
+
+	private final Logger LOGGER = LoggerFactory.getLogger(TestDosController.class);
+
+	@RequestMapping("/testDos")
 	public ModelAndView mensaje() {
-		LOGGER.debug("url: /test numero: {}",1);
+		LOGGER.debug("url: /test numero: {}",2);
 		super.isUserLogueado();
 		//esta es la vista de retorno que necesitamos.
 		super.agregarCSSExtra("test.css");
