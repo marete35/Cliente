@@ -12,16 +12,24 @@ public class TestDosController extends BaseController{
 
 
 	private final Logger LOGGER = LoggerFactory.getLogger(TestDosController.class);
+	private final Logger LOGGER_EXCEPTIONS = LoggerFactory.getLogger("ONLY_EXCEPCIONES");
 
 	@RequestMapping("/testDos")
 	public ModelAndView mensaje() {
-		LOGGER.debug("url: /test numero: {}",2);
-		super.isUserLogueado();
-		//esta es la vista de retorno que necesitamos.
-		super.agregarCSSExtra("test.css");
-		super.agregarJsExtra("componentTest.js");
-		super.modelo.put("nombre","mario");
-		return new ModelAndView("pages/test", modelo);
-	}
+		try {
+			LOGGER.debug("url: /test numero: {}",2);
+			super.isUserLogueado();
+			//esta es la vista de retorno que necesitamos.
+			super.agregarCSSExtra("test.css");
+			super.agregarJsExtra("componentTest.js");
+			super.modelo.put("nombre","mario");
+			Integer z = 3 / 0;
+			return new ModelAndView("pages/test", modelo);
+		} catch (Exception e) {
+			e.printStackTrace();
+			LOGGER_EXCEPTIONS.error(e.getMessage());
+			return null;
+		}
+	} 
 
 }

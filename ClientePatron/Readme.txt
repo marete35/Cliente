@@ -22,5 +22,11 @@ Librerias JavaScript
 	jQueryValidate
 	taffy(json)
 	
+Fuentes
+
+#Log4j loguear en varios archivos. 
+http://java-all-frameworks.blogspot.com/2011/08/log4j.html
+
+	
 
 
