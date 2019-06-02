@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>MDCFilter</filter-name>
+  	<display-name>MDCFilter</display-name>
+  	<description></description>
+  	<filter-class>ar.com.marete.interceptors.MDCFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>MDCFilter</filter-name>
+  	<url-pattern>/MDCFilter</url-pattern>
+  </filter-mapping>
 </web-app>

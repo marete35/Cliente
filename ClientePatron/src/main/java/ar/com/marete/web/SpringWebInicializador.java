@@ -9,6 +9,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 
 import ar.com.marete.config.SpringConfigurador;
+import ar.com.marete.interceptors.MDCFilter;
 
 public class SpringWebInicializador implements WebApplicationInitializer{
 
@@ -22,12 +23,11 @@ public class SpringWebInicializador implements WebApplicationInitializer{
 		
 		//un servlet que haga de controlador frontal y despache todas las peticiones hacia las vistas 
 		//y controladores. 
-		ServletRegistration.Dynamic servlet = servletContext.addServlet("dispacher", new DispatcherServlet(contexto));
+		ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(contexto));
 		servlet.setLoadOnStartup(1);
 		servlet.addMapping("/");
+		servletContext.addFilter("My filter", MDCFilter.class).addMappingForServletNames(null, false, "dispatcher");
 		
 	}
 	
-	
-
 }

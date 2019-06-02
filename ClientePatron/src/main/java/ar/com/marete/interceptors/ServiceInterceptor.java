@@ -1,7 +1,5 @@
 package ar.com.marete.interceptors;
 
-import java.util.logging.Logger;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,7 +8,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 public class ServiceInterceptor extends HandlerInterceptorAdapter{
 	
-    private final static Logger LOGGER = Logger.getLogger("ServiceInterceptor");
+    //private final static Logger LOGGER = Logger.getLogger(ServiceInterceptor.class);
     
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object object) throws Exception {
 
