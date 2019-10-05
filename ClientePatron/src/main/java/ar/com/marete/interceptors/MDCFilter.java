@@ -40,6 +40,7 @@ public class MDCFilter implements Filter {
 		//MDC.put("sessionId",httpServletRequest.getSession().getId());
         Cookie[] cookies = httpServletRequest.getCookies();
         MDC.put("sessionId",this.getCookieValue(cookies, "JSESSIONID"));
+        MDC.put("nombre", "mario");
 		chain.doFilter(request, response);
 	}
 
