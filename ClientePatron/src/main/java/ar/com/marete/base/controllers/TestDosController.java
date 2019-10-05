@@ -27,7 +27,7 @@ public class TestDosController extends BaseController{
 			return new ModelAndView("pages/test", modelo);
 		} catch (Exception e) {
 			e.printStackTrace();
-			LOGGER_EXCEPTIONS.error(e.getMessage());
+			LOGGER_EXCEPTIONS.error(e.getMessage(),e);
 			return null;
 		}
 	} 
