@@ -8,6 +8,7 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.MDC;
@@ -36,7 +37,9 @@ public class MDCFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest)request;
-		MDC.put("sessionId",httpServletRequest.getSession().getId());
+		//MDC.put("sessionId",httpServletRequest.getSession().getId());
+        Cookie[] cookies = httpServletRequest.getCookies();
+        MDC.put("sessionId",this.getCookieValue(cookies, "JSESSIONID"));
 		chain.doFilter(request, response);
 	}
 
@@ -45,6 +48,16 @@ public class MDCFilter implements Filter {
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		// TODO Auto-generated method stub
+	}
+	
+	private String getCookieValue(Cookie[] cookies, String nameCookie) {
+		String jsessionidValue = null;
+		for(Cookie cookie:cookies) {
+			if(nameCookie.equals(cookie.getName())) {
+				jsessionidValue =  cookie.getValue();
+			}
+		}
+		return jsessionidValue;
 	}
 
 }
