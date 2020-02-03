@@ -11,7 +11,7 @@ import ar.com.marete.config.Constantes;
 
 public class BaseController {
 
-	private static Logger LOGGER = LoggerFactory.getLogger(BaseController.class);
+	private static Logger logger = LoggerFactory.getLogger(BaseController.class);
 	private ArrayList<String> archivosJs = new ArrayList<String>();
 	private ArrayList<String> archivosCss = new ArrayList<String>();
 	protected Map<String, Object> modelo = new HashMap<String, Object>();
@@ -57,7 +57,7 @@ public class BaseController {
 	}
 	
 	protected void isUserLogueado() {
-		LOGGER.debug("Es Base Controller");
+		logger.debug("Es Base Controller");
 	}
 
 }
