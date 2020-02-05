@@ -19,13 +19,6 @@ public class TrackController {
 	private static Logger logger = LoggerFactory.getLogger(BaseController.class);
 	@Autowired(required = false)
 	private HttpServletRequest request;
-
-	
-	/*@After ("args(name)")
-	public void logStringArguments (String name){
-		
-		logger.debug ("Running After Advice. String argument passed="+name);
-	}*/
 	
 	@Before ("execution (public * ar.com.marete.base.controllers.*.*())")
 	public void adviceControllersEndPoint(JoinPoint jp){
