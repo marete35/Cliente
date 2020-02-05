@@ -1,4 +1,4 @@
-package ar.com.marete.interceptors;
+package ar.com.marete.filters;
 
 import java.io.IOException;
 

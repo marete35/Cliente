@@ -8,7 +8,7 @@
   	<filter-name>MDCFilter</filter-name>
   	<display-name>MDCFilter</display-name>
   	<description></description>
-  	<filter-class>ar.com.marete.interceptors.MDCFilter</filter-class>
+  	<filter-class>ar.com.marete.filters.MDCFilter</filter-class>
   </filter>
   <filter-mapping>
   	<filter-name>MDCFilter</filter-name>
