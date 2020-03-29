@@ -6,6 +6,7 @@ Spring 4.3
 Java 8
 Jsp
 Jstl
+Maven profiles
 
 	Back-End
 	
@@ -26,6 +27,8 @@ Fuentes
 
 #Log4j loguear en varios archivos. 
 http://java-all-frameworks.blogspot.com/2011/08/log4j.html
+
+https://www.arquitecturajava.com/maven-profiles-y-como-usa/
 
 	
 
