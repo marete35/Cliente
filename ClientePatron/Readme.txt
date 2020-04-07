@@ -31,6 +31,8 @@ https://www.arquitecturajava.com/maven-profiles-y-como-usa/
 
 https://nopaldev.com/filtrar-properties-por-ambiente-en-maven/
 
+https://stackoverflow.com/questions/9543219/how-to-configure-maven-to-use-different-log4j-properties-files-in-different-envi
+
 
 	Modo de Instalar la aplicacion
 	
