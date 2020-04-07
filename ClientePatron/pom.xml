@@ -18,41 +18,8 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<log4j.version>1.2.17</log4j.version>
 		<maven.test.skip>true</maven.test.skip>
+		<param>Default</param>
 	</properties>
-
-	<!-- Hacemos uso de Maven profiles para diferenciar entre desarrollo y produccion -->
-	<profiles>
-		<profile>
-			<id>Desarrollo</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<build>
-				<resources>
-					<resource>
-						<directory>src/main/resources</directory>
-						<excludes>
-							<exclude>produccion.properties</exclude>
-						</excludes>
-					</resource>
-				</resources>
-			</build>
-		</profile>
-		<profile>
-			<id>Produccion</id>
-			<build>
-				<resources>
-					<resource>
-						<directory>src/main/resources</directory>
-						<excludes>
-							<exclude>desarrollo.properties</exclude>
-						</excludes>
-					</resource>
-				</resources>
-			</build>
-		</profile>
-	</profiles>
-
 
 	<url>http://maven.apache.org</url>
 	<dependencies>
@@ -112,7 +79,13 @@
 			<version>1.7.7</version>
 		</dependency>
 	</dependencies>
+	
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources/${param}</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-deploy-plugin</artifactId>

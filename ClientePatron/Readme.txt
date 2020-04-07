@@ -30,6 +30,17 @@ http://java-all-frameworks.blogspot.com/2011/08/log4j.html
 
 https://www.arquitecturajava.com/maven-profiles-y-como-usa/
 
+https://nopaldev.com/filtrar-properties-por-ambiente-en-maven/
+
+
+	Modo de Instalar la aplicacion
+	
+mvn clean install						(si no le pasamos ningun parametros se establece el default, esta definido asi en el pom.xml)
+mvn clean install  -Dparam=dev
+mvn clean install  -Dparam=prod
+
+
+
 	
 
 
