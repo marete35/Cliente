@@ -37,13 +37,17 @@ public class MDCFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest)request;
-		//MDC.put("sessionId",httpServletRequest.getSession().getId());
         Cookie[] cookies = httpServletRequest.getCookies();
-        MDC.put("sessionId",this.getCookieValue(cookies, "JSESSIONID"));
-        MDC.put("nombre", "mario");
+        if(cookies!=null) {
+	        MDC.put("sessionId",this.getCookieValue(cookies, "JSESSIONID"));
+	        MDC.put("nombre", "mario");
+        }else {
+        	MDC.put("sessionId","-1");
+			MDC.put("nombre", "no user");
+		}
 		chain.doFilter(request, response);
 	}
-
+	
 	/**
 	 * @see Filter#init(FilterConfig)
 	 */
@@ -51,14 +55,17 @@ public class MDCFilter implements Filter {
 		// TODO Auto-generated method stub
 	}
 	
+	/*
+	 * Dado las cookies y el nombre de una ella retorna su valor. 
+	 */
 	private String getCookieValue(Cookie[] cookies, String nameCookie) {
-		String jsessionidValue = null;
+		String valueCookie = "";
 		for(Cookie cookie:cookies) {
 			if(nameCookie.equals(cookie.getName())) {
-				jsessionidValue =  cookie.getValue();
+				valueCookie =  cookie.getValue();
 			}
 		}
-		return jsessionidValue;
+		return valueCookie;
 	}
 
 }
