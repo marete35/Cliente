@@ -37,5 +37,18 @@ https://stackoverflow.com/questions/9543219/how-to-configure-maven-to-use-differ
 
 	Modo de Instalar la aplicacion
 	
+mvn clean install -P dev   (con -P indicamos el perfil) 
+
+Lo ideal de entornos que se tendria que tener son: 
+	
+		-localhost_dev
+		-localhost_qa
+		-localhost_prod
+		-dev
+		-qa
+		-prod
+		
+Esto se debe a que en cada properties se puede tener url diferentes y mas si se apuntan a otros proyectos en el mismo
+ambiente. 
 
 
