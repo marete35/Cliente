@@ -6,6 +6,7 @@ Spring 4.3
 Java 8
 Jsp
 Jstl
+Maven profiles
 
 	Back-End
 	
