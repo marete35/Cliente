@@ -37,12 +37,5 @@ https://stackoverflow.com/questions/9543219/how-to-configure-maven-to-use-differ
 
 	Modo de Instalar la aplicacion
 	
-mvn clean install						(si no le pasamos ningun parametros se establece el default, esta definido asi en el pom.xml)
-mvn clean install  -Dparam=dev
-mvn clean install  -Dparam=prod
-
-
-
-	
 
 
