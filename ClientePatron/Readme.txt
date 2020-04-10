@@ -34,6 +34,8 @@ https://nopaldev.com/filtrar-properties-por-ambiente-en-maven/
 
 https://stackoverflow.com/questions/9543219/how-to-configure-maven-to-use-different-log4j-properties-files-in-different-envi
 
+https://mkyong.com/maven/maven-profiles-example/
+
 
 	Modo de Instalar la aplicacion
 	
