@@ -39,6 +39,15 @@
 			 </properties>
 		</profile>
 		<profile>
+			<id>qa</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+			    <env>qa</env>
+			</properties>
+		</profile>
+		<profile>
 			<id>prod</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>
@@ -48,12 +57,30 @@
 			</properties>
 		</profile>
 		<profile>
-			<id>qa</id>
+			<id>localhost_dev</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
-			    <env>qa</env>
+			    <env>localhost_dev</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>localhost_qa</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+			    <env>localhost_qa</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>localhost_prod</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+			    <env>localhost_prod</env>
 			</properties>
 		</profile>
 	</profiles>
