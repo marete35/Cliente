@@ -39,23 +39,13 @@ public class MDCFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest)request;
         Cookie[] cookies = httpServletRequest.getCookies();
         if(cookies!=null) {
-<<<<<<< HEAD:ClientePatron/src/main/java/ar/com/marete/filters/MDCFilter.java
         	MDC.put("sessionId",this.getCookieValue(cookies, "JSESSIONID"));
         	MDC.put("nombre", "mario");
         }else {
         	MDC.put("sessionId","-1");
         	MDC.put("nombre", "no user");
         }
-        chain.doFilter(request, response);
-=======
-	        MDC.put("sessionId",this.getCookieValue(cookies, "JSESSIONID"));
-	        MDC.put("nombre", "mario");
-        }else {
-        	MDC.put("sessionId","-1");
-			MDC.put("nombre", "no user");
-		}
 		chain.doFilter(request, response);
->>>>>>> master:ClientePatron/src/main/java/ar/com/marete/interceptors/MDCFilter.java
 	}
 	
 	/**
