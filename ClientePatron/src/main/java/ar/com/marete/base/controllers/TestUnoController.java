@@ -15,7 +15,7 @@ public class TestUnoController extends BaseController {
 	
 	@RequestMapping("/testUno")
 	public ModelAndView mensaje() {
-		LOGGER.debug("url: /test numero: {}",1);
+		//LOGGER.debug("url: /test numero: {}",1);
 		super.isUserLogueado();
 		//esta es la vista de retorno que necesitamos.
 		super.agregarCSSExtra("test.css");

@@ -142,6 +142,14 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.7</version>
 		</dependency>
+		
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <scope>compile</scope>
+		    <version>1.8.10</version>
+		</dependency>      
+		
 	</dependencies>
 	
 	

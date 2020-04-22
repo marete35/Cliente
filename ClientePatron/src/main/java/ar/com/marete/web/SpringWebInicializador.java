@@ -9,7 +9,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 
 import ar.com.marete.config.SpringConfigurador;
-import ar.com.marete.interceptors.MDCFilter;
+import ar.com.marete.filters.MDCFilter;
 
 public class SpringWebInicializador implements WebApplicationInitializer{
 
