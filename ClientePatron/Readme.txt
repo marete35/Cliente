@@ -54,4 +54,3 @@ Esto se debe a que en cada properties se puede tener url diferentes y mas si se 
 ambiente. 
 
 Texto de prueba local
-
